@@ -6,7 +6,7 @@ class BaseContact:
         self.surname = surname
         self.phone = phone
         self.mail = mail
-        self.__label_length = len(self.name) + len(self.surname)
+        self._label_length = len(self.name) + len(self.surname)
 
     def __str__(self):
         return f'{self.name} {self.surname}'
@@ -16,7 +16,7 @@ class BaseContact:
     
     @property
     def label_length(self):
-        return self.__label_length
+        return self._label_length
 
 
 class BusinessContact(BaseContact):
